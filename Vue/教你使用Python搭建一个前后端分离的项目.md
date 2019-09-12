@@ -1,6 +1,7 @@
-后台回复 vue 获取本文所有源代码。
+本文教你玩转 django 及 vue。 有问题请关注公众号 somenzz ，后台留言交流。
 
-####前后端完全不分离
+
+#### 前后端完全不分离
 
 在 5 年前，前后端还是几乎是不分离的，web 开发中的代码尤其混杂，PHP 中有 JS，JSP 中有 JS，ASP 中有 JS，JS 中有 HTML，HTML 中有 CSS，HTML 中还有 JS，各种标签代码一锅粥，数据在各处流窜，眼花缭乱，极难维护。
 
@@ -22,13 +23,13 @@
 2、维护越来越困难：各种代码混在一起，可读性极差，耦合度极高，改动一处可能会引发灾难。
 3、效率下降：一个人精力有限，很难精通所有语言，精通 javascript 的可能不会 Python，反之亦然，因此开发时需要临时再学习新知识，效率下降。
 
-####前后端半离不离
+#### 前后端半离不离
 
 AJAX 的出现，让网页局部刷新成为可能。这一特性可以让用户留在当前页面中，同时发出新的HTTP请求，数据却可以不断地更新。解决了服务器每次请求都返回整个网页这种低效的机制。最早大规模使用 AJAX 的就是 Gmail，Gmail 的页面在首次加载后，剩下的所有数据都依赖于 AJAX 来更新大大提升了响应速度。也就是解决了上述问题 1。
 
 虽然有 AJAX ，但大多数的页面还是有服务器端渲染的，也就是前后端半离不离的阶段，这仍然无法解决上述问题 2 和问题 3。
 
-####前后端彻底分离
+#### 前后端彻底分离
 
 后来随着前端技术的飞速发展，浏览器的不断迭代，前端 MVC 框架应运而生，如 React、Vue、Angular ，利用这些框架，我们可以轻松的构建起一个无需服务器端渲染就可以展示的网站，同时这类框架都提供了前端路由功能，后台可以不再控制路由的跳转，将原本属于前端的业务逻辑全部丢给前端，这样前后端分离可以说是最为彻底，生成的代码的可读性和维护性都得到相应提高。如下面的一段代码：
 
@@ -104,7 +105,7 @@ export default {
 
 #### DjangoRestFramework + Vue 前后端分离环境搭建
 
-说了这么多，来点硬货吧。什么是 REST API，可以看看阮一峰老师的博客上的解释，这里就不啰嗦了。
+说了这么多，来点硬货吧。什么是 REST API，可以看看阮一峰老师的博客上的[解释](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)，这里就不啰嗦了。
 
 DjangoRestFramework 是 Python 里开发 REST API 最好用的库，没有之一，当然这是我自己的观点，如果你不授受，就让我接受你的，在后台给我留言。
 
@@ -116,7 +117,7 @@ DjangoRestFramework 是 Python 里开发 REST API 最好用的库，没有之一
 
 先按官方网站上的教程自己先做一个 demo，链接如下：
 
-###### 前端demo
+###### 来一个前端 demo
 
 vue-cli 是 Vue 的脚手架工具，功能非常强大，官方链接： [https://cli.vuejs.org/zh/](https://cli.vuejs.org/zh/)
 
@@ -176,6 +177,7 @@ new Vue({
   render: h => h(App),
 }).$mount('#app')
 ```
+这里我是一步一步安装的，直接下载源码的朋友，请在 package.json 所在的目录执行 npm install 即可自动安装所有的依赖包。
 
 5、在 components 目录下新建一个 TestApi.vue 的文件，写入以下内容：
 
@@ -223,7 +225,7 @@ new Vue({
       onSubmitPost() {
         console.log('submit! post');
           axios.post('api/users/',this.formInline).then(res => {//get()中的参数要与mock.js文件中的Mock.mock()配置的路由保持一致
-          // axios.post('http://127.0.0.1:8000/users.json',formInline).then(res => {//get()中的参数要与mock.js文件中的Mock.mock()配置的路由保持一致
+          // axios.post('http://127.0.0.1:8000/users.json',this.formInline).then(res => {//get()中的参数要与mock.js文件中的Mock.mock()配置的路由保持一致
           console.log(res.data);//在console中看到数据
         }).catch(res => {
           alert('wrong');
@@ -262,7 +264,7 @@ Mock.mock('api/users/', (req, res) => {//当post或get请求到/api/users/路由
 ```
 这里我们返回一个列表反接口。试运行一下。我们可以看到，点击 get 请求后，下面的结果窗口返回了 mock.js 中自己造的假数据。请求时，在 network 中并未有任何请求记录。
 
-![pic\vue-mock.gif](pic\vue-mock.gif)
+![vue-mock](pic\vue-mock.gif)
 
 到目前为止，似乎并没有出现什么问题，请继续。
 
@@ -296,7 +298,7 @@ python manage.py runserver
 
 接下来 可以看到返回如下 json 格式的数据。
 
-![pic\drf-api.jpg](pic\drf-api.jpg)
+![drf-api](pic\drf-api.jpg)
 
 可以看到这里的数据和我们之前 mock 的数据是一致的，其实就是我复制的。
 
@@ -307,7 +309,7 @@ python manage.py runserver
 
 执行结果如下图所示：
 
-![pic\vue-get-django.gif](pic\vue-get-django.gif)
+![vue-get-django](pic\vue-get-django.gif)
 
 
 get 请求报错的结果如下：
@@ -358,7 +360,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 此时，执行 get 请求结果如下：
 
-![pic\vue-get-django2.gif](pic\vue-get-django2.gif)
+![vue-get-django2](pic\vue-get-django2.gif)
 
 可以看到已经联调成功了，前端展示了后端返回的数据。
 
@@ -424,7 +426,7 @@ urlpatterns = [
 ```
 执行 python manage.py runserver 后打开浏览器，执行 get 请求，可以看到如下结果，此时前后端已经同源。
 
-![]()
+![django已经同源](pic/django-last.jpg)
 
 再接下来的配置基本和第一种方案一样了，设置 django 收集静态资源的路径 STATIC_ROOT，执行 python manage.py collectstatic ，然后参考下面 uwsgi 的配置进行生产环境部署，这种方法不需要后端允许跨源，比较安全。
 
