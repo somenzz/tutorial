@@ -264,7 +264,7 @@ Mock.mock('api/users/', (req, res) => {//当post或get请求到/api/users/路由
 ```
 这里我们返回一个列表反接口。试运行一下。我们可以看到，点击 get 请求后，下面的结果窗口返回了 mock.js 中自己造的假数据。请求时，在 network 中并未有任何请求记录。
 
-![vue-mock](pic\vue-mock.gif)
+![vue-mock](./pic/vue-mock.gif)
 
 到目前为止，似乎并没有出现什么问题，请继续。
 
@@ -298,7 +298,7 @@ python manage.py runserver
 
 接下来 可以看到返回如下 json 格式的数据。
 
-![drf-api](pic\drf-api.jpg)
+![drf-api](./pic/drf-api.jpg)
 
 可以看到这里的数据和我们之前 mock 的数据是一致的，其实就是我复制的。
 
@@ -309,7 +309,7 @@ python manage.py runserver
 
 执行结果如下图所示：
 
-![vue-get-django](pic\vue-get-django.gif)
+![vue-get-django](./pic/vue-get-django.gif)
 
 
 get 请求报错的结果如下：
@@ -360,7 +360,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 此时，执行 get 请求结果如下：
 
-![vue-get-django2](pic\vue-get-django2.gif)
+![vue-get-django2](./pic/vue-get-django2.gif)
 
 可以看到已经联调成功了，前端展示了后端返回的数据。
 
@@ -426,7 +426,7 @@ urlpatterns = [
 ```
 执行 python manage.py runserver 后打开浏览器，执行 get 请求，可以看到如下结果，此时前后端已经同源。
 
-![django已经同源](pic/django-last.jpg)
+![django已经同源](./pic/django-last.jpg)
 
 再接下来的配置基本和第一种方案一样了，设置 django 收集静态资源的路径 STATIC_ROOT，执行 python manage.py collectstatic ，然后参考下面 uwsgi 的配置进行生产环境部署，这种方法不需要后端允许跨源，比较安全。
 
@@ -453,9 +453,7 @@ logto = /home/aaron/web/django-mysite/uwsgi.log
 daemonize = /home/aaron/web/django-mysite/uwsgi.log
 
 ```
-后台回复 vue 获取本文所有源代码。
 
 熬夜写了很久，都是自己一点一点实践中的总结，希望对从事 Python 及 vue 的初学者有帮助。
 
-点个在看、点个广告、收藏，转发都能激励我坚持写去下。非常感谢你的支持。
 
