@@ -304,7 +304,7 @@ python manage.py runserver
 #### 前后端如何在开发环境进行联调
 
 
-开发环境下，vue 会占用一个端口，这里是 localhost:8080，而 djangorestframework 也会占用一个端口，比如 localhost:8000，那么  localhost:8080 需要获取 localhost:8000 的数据进行联调，我们将前端 demo 中 axios 请求的 url 由 改为 ，也就是将上面的注释掉，下面的反注释掉。
+开发环境下，vue 会占用一个端口，这里是 localhost:8080，而 djangorestframework 也会占用一个端口，比如 localhost:8000，那么  localhost:8080 需要获取 localhost:8000 的数据进行联调，我们将前端 demo 中 axios 请求的 url 由 改为 http://127.0.0.1:8000/users.json ，也就是将最开始的前端代码上面的注释掉，下面的反注释掉。
 
 执行结果如下图所示：
 
