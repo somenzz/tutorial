@@ -115,7 +115,7 @@ DjangoRestFramework 是 Python 里开发 REST API 最好用的库，没有之一
 
 这里不会对每一个步骤都做详细陈述，因为官方网站都为你准备好了，照着去做就行。
 
-先按官方网站上的教程自己先做一个 demo，链接如下：
+先按官方网站上的教程自己先做一个 demo
 
 ###### 来一个前端 demo
 
@@ -144,7 +144,6 @@ npm install -g @vue/cli
 ```
 就可以看到在端口 8080 已经启动了 web 服务。打开浏览器输入 http://localhost:8080/ 即可访问到 vue 项目的默认界面。
 
-这里有个图片。
 
 3、安装 element-ui ,axios, mockjs
 
