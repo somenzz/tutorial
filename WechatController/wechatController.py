@@ -191,11 +191,13 @@ def wechatController(msg):
                 return process.stdout.decode("gbk")
 
         elif command.startswith("传文件"):
-            dir = ""
-            dir = command.replace("传文件","")
-            if dir != "":
-                bot.file_helper.send_file(dir)
-
+            file_name = ""
+            file_name = command.replace("传文件","")
+            if file_name != "":
+                if file_name.endswith(".png") or file_name.endswith(".jpg"):
+                    bot.file_helper.send_image(file_name)
+                else:
+                    bot.file_helper.send_file(file_name)
         else:
             os.chdir(org_path)
             process = subprocess.run(command,shell=True,stdout=subprocess.PIPE)
@@ -204,7 +206,8 @@ def wechatController(msg):
 
 
 ###主程序入口
-if __name__ == "__main__":
+# if __name__ == '__main__':
+def main():
     start_new_thread(heartbeat)
     bot.join()
     # embed()
