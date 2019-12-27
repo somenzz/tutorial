@@ -160,8 +160,8 @@ def show_memory_info(hint):
 
 def func2():
     show_memory_info("func2 调用前")
-    a = [i for i in range(1000000)]
-    b = [i for i in range(1000000)]
+    a = [i for i in range(10000000)]
+    b = [i for i in range(10000000)]
     a.append(b)
     b.append(a)
     show_memory_info("func2 调用结束前")
