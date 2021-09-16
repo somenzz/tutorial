@@ -5,7 +5,7 @@ from utils import print_info
 
 M = imaplib.IMAP4_SSL(host = settings.imap_server)
 print('已连接服务器')
-M.login(settings.email,settings.password)
+M.login(settings.account,settings.password)
 print('已登陆')
 print(M.noop())
 M.select()

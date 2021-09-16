@@ -38,10 +38,10 @@ def print_info(msg, indent=0):
     else:
         content_type = msg.get_content_type()
         if content_type=='text/plain' or content_type=='text/html':
-            content = msg.get_payload(decode=False)
+            content = msg.get_payload(decode=True)
             charset = guess_charset(msg)
-            # if charset:
-            #     content = content.decode(charset)
+            if charset:
+                content = content.decode(charset)
             print('%sText: %s' % ('  ' * indent, content + '...'))
         else:
             print('%sAttachment: %s' % ('  ' * indent, content_type))

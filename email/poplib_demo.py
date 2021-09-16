@@ -7,7 +7,7 @@ import settings
 # 连接到POP3服务器:
 server = poplib.POP3(settings.pop3_server)
 # 身份认证:
-server.user(settings.email)
+server.user(settings.account)
 server.pass_(settings.password)
 
 # stat()返回邮件数量和占用空间:

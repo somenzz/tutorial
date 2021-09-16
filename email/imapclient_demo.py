@@ -16,13 +16,14 @@ with IMAPClient(host=settings.imap_server,ssl_context=ssl_context) as client:
     print('%d messages in INBOX' % select_info[b'EXISTS'])
     # search criteria are passed in a straightforward way
     # (nesting is supported)
-    messages = client.search(['FROM', 'somezz@163.com'])
+    messages = client.search(['FROM', 'somenzz@163.com'])
     # `response` is keyed by message id and contains parsed,
     # converted response items.
     for message_id, data in client.fetch(messages, ['ENVELOPE']).items():
         envelope = data[b'ENVELOPE']
         print('{id}: subject: {subject} date: {date}'.format(
             id=message_id,
-            subject = envelope.subject.decode(),
+            subject = envelope.subject.decode('utf-8'),
             date = envelope.date
         ))
+        break
