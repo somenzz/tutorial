@@ -28,6 +28,3 @@ python add_redflag.py {your_img_filepath}
 
 ![](./new_avatar.jpeg)
 
-![./profile.png]
-
-
