@@ -1,8 +1,13 @@
 ## 国庆节，给你的头像添加五星红旗
 
+### 下载源代码
+
 ```sh
-cd avatar
+git clone https://github.com/somenzz/tutorial.git
+cd tutorial/avatar
 ```
+
+你也可以点击[此处下载](https://codeload.github.com/somenzz/tutorial/zip/refs/heads/master)。
 
 ### 安装依赖
 

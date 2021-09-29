@@ -1,5 +1,5 @@
 # tutorial
-实用的关于 Python 的微教程，动画展示。Useful tutorial on Python.
+实用的关于 Python 的微教程，Useful tutorial on Python.
 
 - [Python电子邮件相关](email/readme.md)
 - [我为什么要使用IPython](IPython/我为什么要使用IPython.md)
@@ -9,3 +9,9 @@
 - [微信消息转发至邮件-回复邮件转发至微信](WeChat2Mail/Readme.md)
 - [100 个 Python 小项目源码，总有一个用得到](./python-100-mini-projects.md)
 - [国庆节-为你的头像添加五星红旗](./avatar/README.md)
+
+
+关注公众号「Python七号」，每天陪你学习一个小技术。
+
+有问题，欢迎 issue 留言咨询。
+
