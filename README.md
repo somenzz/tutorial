@@ -8,3 +8,4 @@
 - [学习一下Python的垃圾回收](memoryManage/README.md)
 - [微信消息转发至邮件-回复邮件转发至微信](WeChat2Mail/Readme.md)
 - [100 个 Python 小项目源码，总有一个用得到](./python-100-mini-projects.md)
+- [国庆节-为你的头像添加五星红旗](./avatar/README.md)
