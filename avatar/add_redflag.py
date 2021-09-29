@@ -27,7 +27,7 @@ def add_five_starred_red_flag(origin_img: str, target_img : str = None):
     for i in range(w):
         for j in range(h):
             color = area.getpixel((i, j))
-            alpha = 200-(i+1)//2
+            alpha = 220-(i+1)//3
             if alpha < 0:
                 alpha=0
             color = color[:-1] + (alpha, )

@@ -15,3 +15,19 @@ pip install -r requirements.txt
 ```sh
 python add_redflag.py {your_img_filepath}
 ```
+
+例如：
+```sh
+❯ python add_redflag.py avatar.jpeg
+新头像路径：new_avatar.jpeg
+```
+
+效果图对比：
+
+![](./avatar.jpeg)
+
+![](./new_avatar.jpeg)
+
+![./profile.png]
+
+
