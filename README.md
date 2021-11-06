@@ -9,6 +9,7 @@
 - [微信消息转发至邮件-回复邮件转发至微信](WeChat2Mail/Readme.md)
 - [100 个 Python 小项目源码，总有一个用得到](./python-100-mini-projects.md)
 - [国庆节-为你的头像添加五星红旗](./avatar/README.md)
+- [快速获取指定目录最大的文件](./largest_files.py)
 
 
 关注公众号「Python七号」，每天陪你学习一个小技术。

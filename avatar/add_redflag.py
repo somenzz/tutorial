@@ -1,6 +1,7 @@
 from PIL import Image
-import fire
+#import fire
 from pathlib import Path
+import sys
 
 def add_five_starred_red_flag(origin_img: str, target_img : str = None):
 
@@ -27,7 +28,7 @@ def add_five_starred_red_flag(origin_img: str, target_img : str = None):
     for i in range(w):
         for j in range(h):
             color = area.getpixel((i, j))
-            alpha = 220-(i+1)//3
+            alpha = 230-(i+1)//3
             if alpha < 0:
                 alpha=0
             color = color[:-1] + (alpha, )
@@ -39,5 +40,6 @@ def add_five_starred_red_flag(origin_img: str, target_img : str = None):
 
 
 if __name__ == '__main__':
-    fire.Fire(add_five_starred_red_flag)
+    #fire.Fire(add_five_starred_red_flag)
+    add_five_starred_red_flag(sys.argv[1])
     
