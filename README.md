@@ -1,6 +1,7 @@
-# tutorial
+# Python tutorial Python 教程
 实用的关于 Python 的微教程，Useful tutorial on Python.
 
+- [视频号-编程小妙招](视频号-编程小妙招/README.md)
 - [Python电子邮件相关](email/readme.md)
 - [我为什么要使用IPython](IPython/我为什么要使用IPython.md)
 - [玩转Vue和Django的前后端分离](Vue/教你使用Python搭建一个前后端分离的项目.md)
